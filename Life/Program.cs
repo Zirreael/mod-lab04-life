@@ -305,12 +305,12 @@ namespace cli_life
             return flag;
         }
 
-        static void Upload()
+        static void Upload(string name, int w, int h)
         {
-            StreamReader sr = new StreamReader("Board1.txt");
+            StreamReader sr = new StreamReader(name);
             board = new Board(
-                width: 10,
-                height: 10,
+                width: w,
+                height: h,
                 cellSize: 1);
             string str = sr.ReadToEnd();
             int n = 0;
