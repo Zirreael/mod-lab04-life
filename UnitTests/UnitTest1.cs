@@ -18,5 +18,17 @@ public void TestRead()
             Assert.IsTrue(board.Cells[1, 0].IsAlive);
             Assert.IsTrue(board.Cells[1, 1].IsAlive);
             }
+
+[TestMethod]
+public void TestFind()
+{
+            Board board;
+            string name = "Board1.txt";
+            Upload(name, 10, 10)
+            Figure[] fig = Get_fig();
+            Figure block = fig[0];
+            int count = Find(block, board);
+            Assert.AreEqual(count, 2);
+}
 }
 }
