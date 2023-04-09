@@ -30,5 +30,23 @@ public void TestFind()
             int count = Find(block, board);
             Assert.AreEqual(count, 2);
 }
+[TestMethod]
+public void TestAlive()
+{
+            Board board;
+            string name = "Board1.txt";
+            Upload(name, 10, 10)
+            int count = board.AliveCount();
+            Assert.AreEqual(count, 8);
+}
+[TestMethod]
+public void TestSimm()
+{
+            Board board;
+            string name = "Board1.txt";
+            Upload(name, 10, 10)
+            int count = Simm();
+            Assert.AreEqual(count, 0);
+}
 }
 }
